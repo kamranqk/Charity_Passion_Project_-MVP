@@ -1,0 +1,20 @@
+﻿@model IEnumerable<PassionProjectChariity_s2022.Models.DonationDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Donation/New">Add New Donation</a>
+@foreach (var donation in Model)
+{
+
+    <h2><a href="/Donation/Details/@donation.DonationID">@donation.FundName</a></h2>
+    <div>Donation Amount: @donation.DonationAmount</div>
+    <div>Donation Date: @donation.DonationDate.ToShortDateString()</div>
+
+}
+
+
+
+
+

@@ -1,0 +1,19 @@
+﻿@model PassionProjectChariity_s2022.Models.ViewModels.DetailsDonation
+@{
+    ViewBag.Title = "View";
+}
+<a href="/Donation/List">Go back to list</a>
+<br />
+<a href="/Donation/Edit/@Model.SelectedDonation.DonationID">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Donation/DeleteConfirm/@Model.SelectedDonation.DonationID">Delete</a>
+<h2>Show Donation</h2>
+
+<h3>@Model.SelectedDonation.FundName</h3>
+<div>Donation Amount: @Model.SelectedDonation.DonationAmount</div>
+<div>Donation Date: @Model.SelectedDonation.DonationDate.ToShortDateString()</div>
+
+
+
+
+

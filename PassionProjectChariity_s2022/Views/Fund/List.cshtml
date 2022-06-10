@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PassionProjectChariity_s2022.Models.FundDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Fund/New">Add New Fund</a>
+@foreach (var Fund in Model)
+{
+    <h2><a href="/Fund/Details/@Fund.FundID">@Fund.FundName</a></h2>
+
+}
+    
+

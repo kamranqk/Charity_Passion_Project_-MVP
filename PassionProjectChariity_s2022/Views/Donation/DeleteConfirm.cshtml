@@ -1,0 +1,21 @@
+﻿@model PassionProjectChariity_s2022.Models.DonationDto
+
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2> Are you sure you want to delete this donation?</h2>
+<a href="/Donation/List">Cancel</a>
+<h2>@Model.FundName</h2>
+<div>Donation Date: @Model.DonationDate.ToShortDateString()</div>
+<div>Donation Amount: @Model.DonationAmount</div>
+<div>
+    Fund Name: @Model.FundName </div>
+    <form action = "/Donation/Delete/@Model.DonationID" method = "POST" >
+
+    <input type = "submit" value = "Confirm Delete" />
+
+
+    </form >
+

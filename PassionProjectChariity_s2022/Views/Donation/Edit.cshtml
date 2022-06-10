@@ -1,0 +1,40 @@
+﻿@model PassionProjectChariity_s2022.Models.ViewModels.UpdateDonation
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Donation</h2>
+<form action="/Donation/Update/@Model.SelectedDonation.DonationID" method="POST">
+    <div style="display:none;">
+        @* Pass through the donation ID *@
+        <input type="text" name="DonationID" value="@Model.SelectedDonation.DonationID" />
+    </div>
+    <div>
+        <label>Donation Date:</label> <input type="date" name="DonationDate" value="@Model.SelectedDonation.DonationDate.ToShortDateString()" />
+    </div>
+    <div>
+        <label>Donation Amount:</label> <input type="number" name="DonationAmount" value="@Model.SelectedDonation.DonationAmount" />
+    </div>
+    <div>
+        <label>Fund Name:</label>
+
+        <select name="FundID">
+            @foreach (var fund in Model.FundOptions)
+            {
+                string selected = "";
+                if (fund.FundID == Model.SelectedDonation.FundID)
+                {
+                    selected = "selected";
+                }
+                <option value="@fund.FundID" @selected>@fund.FundName</option>
+
+            }
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Update Donation" />
+
+    </div>
+</form>
+

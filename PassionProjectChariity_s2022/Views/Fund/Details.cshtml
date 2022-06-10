@@ -1,0 +1,25 @@
+﻿@model PassionProjectChariity_s2022.Models.ViewModels.DetailsFund
+
+
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/Fund/List">Go back to list</a>
+<br />
+<a href="/Fund/Edit/@Model.SelectedFund.FundID">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Fund/DeleteConfirm/@Model.SelectedFund.FundID">Delete</a>
+<h2>Fund Name: @Model.SelectedFund.FundName</h2>
+
+
+<div style="margin-top:100px;">
+    <h3>Donations related to this fund</h3>
+    @foreach (var donation in Model.RelatedDonations)
+    {
+        <div>Fund Date:<a href="/Donation/Details/@donation.DonationID">@donation.DonationDate.ToShortDateString()</a></div>
+       <div>Fund Amount:<a href="/Donation/Details/@donation.DonationID">@donation.DonationAmount</a></div>
+       <br/>
+    }
+</div>
+

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<PassionProjectChariity_s2022.Models.FundDto>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Donation</h2>
+<form action="/Donation/Create" method="POST">
+    <div>
+        <label>Donation Amount:</label> <input type="text" name="DonationAmount" />
+    </div>
+    <div>
+        <label>Donation Date:</label> <input type="date" name="DonationDate" />
+    </div>
+    <div>
+        <label>Fund Name:</label>
+        <select name="FundID">
+            @foreach (var fund in Model)
+            {
+                 <option value="@fund.FundID">@fund.FundName</option>
+            
+            }
+        </select>
+    </div>
+    <div>
+        <input type="submit" value="Add Donation" />
+
+    </div>
+</form>
+

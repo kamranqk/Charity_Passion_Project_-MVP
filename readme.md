@@ -1,4 +1,4 @@
-#  --Charity API Application-- Passion Project
+#  --Charity Web Application-- Passion Project
 
 This content management system is design for Charity organisation to 
 manage money trail and direct funds to particular cause in time of need.

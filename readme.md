@@ -18,7 +18,7 @@ Charity Database has 2 tables.
 
 - C# ASP.NET MVP architecture design
 - Object relational mapping system is used to define database structure
-- LINQ to ascess database and executes CRUD operations
+- LINQ to access database and executes CRUD operations
 
 
 
